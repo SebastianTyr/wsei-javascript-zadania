@@ -1,3 +1,23 @@
+//Tablice wielowymiarowe - Zadanie 0
+function checkArray(arr){
+    let outputArray = []
+    arr.forEach(element => {
+        if(element[0] % 2 == 0 && element[1] % 2 == 0){
+            outputArray.push(true)
+        }
+        else{
+            outputArray.push(false)
+        }
+    })
+    console.log(outputArray)
+}
+checkArray([
+    [11, 12],
+    [42, 2],
+    [-4, -120],
+    [0, 0],
+    [1, 34],
+    ])
 
 var task1Array = [
     [2, 3],
