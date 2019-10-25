@@ -18,7 +18,7 @@ checkArray([
     [0, 0],
     [1, 34],
     ])
-
+//Tablice wielowymiarowe - Zadanie 1
 var task1Array = [
     [2, 3],
     ["Ala", "Ola"],
@@ -27,6 +27,12 @@ var task1Array = [
     [12, 15, 67]
 ];
 
+function printArray(task1Array){
+    console.log(task1Array[3][2])
+    console.log(task1Array[2].length)
+    console.log(task1Array[4][2])
+}
+printArray(task1Array)
 
 var task2Array = [
     [1, 2, 3, 4],
