@@ -5,11 +5,11 @@ var calculator = {
     },
     sum: function() {
         let result = this.a + this.b
-        console.log(result)
+        return result
     },
     multiply: function() {
         let result = this.a * this.b
-        console.log(result)
+        return result
     }
 };
 
