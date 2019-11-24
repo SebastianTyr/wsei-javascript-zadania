@@ -24,7 +24,7 @@ Calculator.prototype.divide = function(num1, num2){
 }
 
 Calculator.prototype.printOperations = function(){
-    console.log(this.operations)
+    return this.operations
 }
 
 Calculator.prototype.clearOperations = function(){
@@ -44,5 +44,25 @@ console.log(calc.printOperations())
 calc.divide(4, 2)
 console.log(calc.printOperations())
 
+console.log(calc.printOperations())
+
 calc.clearOperations()
 console.log(calc.printOperations())
+
+const calc1 = new Calculator()
+calc1.add(2, 3)
+console.log(calc1.printOperations())
+
+calc1.multiply(4, 2)
+console.log(calc1.printOperations())
+
+calc1.subtract(3, 6)
+console.log(calc1.printOperations())
+
+calc1.divide(7, 2)
+console.log(calc1.printOperations())
+
+console.log(calc1.printOperations())
+
+calc1.clearOperations()
+console.log(calc1.printOperations())
