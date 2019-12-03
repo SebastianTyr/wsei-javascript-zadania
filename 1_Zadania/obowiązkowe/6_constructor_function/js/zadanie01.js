@@ -8,22 +8,31 @@ Robot.prototype.sayHi = function (toWho) {
         console.log("Robot " + this.name + " greets " + toWho);
     }
     else {
-        console.log("Robot " + this.name + "is broken");
+        console.log("Robot " + this.name + " is broken");
     }
 };
 
 Robot.prototype.changeName = function (newname) {
-    console.log("Robot " + this.name + "changes name to " + newname);
+    console.log("Robot " + this.name + " changes name to " + newname);
     this.name = newname;
 };
 
 Robot.prototype.fixIt = function () {
     this.isFunctional = true;
-    console.log("Robot " + this.name + "was fixed");
+    console.log("Robot " + this.name + " was fixed");
 };
 
-var robot = new Robot("Robert")
-robot.sayHi("Sebastian")
-robot.changeName("Marek")
-robot.isFunctional = false
-robot.fixIt()
+var robotRobert = new Robot("Robert")
+robotRobert.sayHi("Sebastian")
+
+var robotHenryk = new Robot("Henryk")
+robotHenryk.isFunctional = false
+robotHenryk.sayHi("Sebastian")
+robotHenryk.changeName("Marek")
+
+var robotPrzemek = new Robot("Przemek")
+robotPrzemek.isFunctional = false
+robotPrzemek.sayHi("Sebastian")
+robotPrzemek.changeName("Wodzisław")
+robotPrzemek.fixIt()
+robotPrzemek.sayHi("Sebastian")

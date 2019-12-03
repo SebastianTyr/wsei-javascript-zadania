@@ -4,36 +4,35 @@ const city = {
     capital: "Kraków",
     population: 1000000,
     president: "Adam Kowalski",
-    primeMinisters: ["Jan Nowak", "Stanisław Kozłowski", "Marian Kowal", "Jan Kowalski"],
+    primeMinisters: ["Jan Nowak", "Stanisław Kozłowski", "Marian Kowal", "Jan Kowalski"]
 }
-console.log(city.name)
-console.log(city.capital)
-console.log(city.population)
-console.log(city.president)
-console.log(city.primeMinisters)
+for(let atributes in city){
+    console.log(city[atributes])
+}
 
 //Obiekty - Zadanie 0b
 const timeMachine = {
-    shape: 'kula',
+    shape: 'Kula',
     model: 'prototyp',
     run: function(date, place){
-        console.log(date + place)
+        console.log(date + " " + place)
     }
 }
-console.log(timeMachine.shape)
-console.log(timeMachine.model)
-timeMachine.run('1997-02-01 ', 'Kraków')
+for(let atributes in timeMachine){
+    console.log(timeMachine[atributes])
+}
+timeMachine.run("1997-02-01", "Kraków")
 
 //Obiekty - Zadanie 1
 const book = {
     name: "Mybook",
     title: "Pieśń Lodu i Ognia",
     author: "George R.R. Martin",
-    numberOfPages: 1000,
+    numberOfPages: 1000
 }
-console.log(book.name)
-console.log(book.title)
-console.log(book.numberOfPages)
+for(let atributes in book){
+    console.log(book[atributes])
+}
 
 //Obiekty - Zadanie 2
 const person = {
@@ -41,13 +40,11 @@ const person = {
     age: 21,
     sayHello: function(){
         console.log('Hello')
-    },
-    print: function(){
-        console.log(person.name)
-        console.log(person.age)
     }
 }
-person.print()
+for(let atributes in person){
+    console.log(person[atributes])
+}
 person.sayHello()
 
 //Obiekty - Zadanie 3
@@ -56,10 +53,9 @@ const recipe = {
     servings: 2
 }
 recipe.ingredients = ['400g makaronu spaghetti','2 jajka','100g boczku','100g śmietany']
-
-console.log(recipe.title)
-console.log(recipe.servings)
-console.log(recipe.ingredients)
+for(let atributes in recipe){
+    console.log(recipe[atributes])
+}
 
 //Obiekty - Zadanie 6
 var spoon = {

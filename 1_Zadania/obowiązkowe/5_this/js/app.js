@@ -4,9 +4,7 @@ const car = {
     color: 'Biały',
     numberOfkilometers: 0,
     printCarInfo: function(){
-        console.log(this.brand)
-        console.log(this.color)
-        console.log(this.numberOfkilometers)
+        console.log(this.brand + ' ' + this.color + ' ' + this.numberOfkilometers + 'km')
     },
     drive: function(km){this.numberOfkilometers += km}
 }
