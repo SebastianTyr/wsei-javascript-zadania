@@ -11,13 +11,13 @@ function sortArray() {
     //Deklaracja tablicy 'points'
     var points = [41, 3, 6, 1, 114, 54, 64];
 
-    //Twoj komentarz ...
+    //funkcja 'sort()' sprtuje tablicę
     points.sort(function (a, b) {
-        //Twoj komentarz ...
+        //funkcja odejmuje 'b' od 'a' w celu porównania dwóch liczb
         return a - b;
     });
 
-    //Twoj komentarz ...
+    //funkcja zwraca posortowaną tablicę 'points'
     return points;
 }
 
