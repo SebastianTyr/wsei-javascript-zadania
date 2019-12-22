@@ -4,19 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var banner = document.querySelector(".ban");
     var blocks = document.querySelectorAll(".block");
     var links = document.querySelector(".links").children;
-    //do zadania 3
-    var footer = document.getElementById("mainFooter");
 
     //Zadanie 0
-    /*function getDatasInfo(elements){
-        const retArray = []
-        retArray.forEach(element => {
-            retArray.push(elements) += element
-        });
-
+    function getDatasInfo(links){
+        let retArray = []
+        for(let  i = 0; i < links.length; i++){
+            retArray.push(links[i].getAttribute('data-color'))
+        }
         return retArray
     }
-    console.log(getDatasInfo(links))*/ //TODO
+    console.log(getDatasInfo(links))//TOCHECK
 
     //Zadanie 1
     function printData(){
@@ -51,8 +48,35 @@ document.addEventListener("DOMContentLoaded", function () {
     changer()
 
     //Zadanie 3
-    function getID(element){
-        console.log(element)
+    var footer = document.getElementById("mainFooter");
+
+    function getId(footer){
+        return footer.getAttribute('id')
     }
-    getID(footer)
+    console.log(getId(footer))
+
+    //Zadanie 5
+    function getClassInfo(elements){
+        console.log(elements)
+        //elements = Array.prototype.slice(elements, 0)
+        let classes = []
+        for(let i = 0; i < elements.length; i++){
+            classes.push(elements[i].classList)
+        }
+
+        return classes
+    }
+    console.log(getClassInfo(banner.classList))//TODO
+
+    //Zadanie 6
+    function setDataDirection(_elements){
+        for(let i = 0; i < _elements.length; i++){
+            console.log(_elements[1].dataset.direction)
+            if(!_elements[i].dataset.direction !== 'top'){
+                _elements[i].dataset.direction = 'top' 
+            }
+        }
+    }
+    const el = document.querySelectorAll('nav ul li')
+    console.log(setDataDirection(el))
 });
