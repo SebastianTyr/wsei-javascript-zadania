@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return _data
     }
 
+    //Zadanie 1
+    function excerciseOne(){
+        const imgChrome = document.querySelector('.ex1 .chrome')
+        console.log(imgChrome)
+        imgChrome.innerHTML = 'chrome'
+        console.log(imgChrome)
+    }
+    excerciseOne()
+
     exerciseZero()
 
     //Zadanie 2
