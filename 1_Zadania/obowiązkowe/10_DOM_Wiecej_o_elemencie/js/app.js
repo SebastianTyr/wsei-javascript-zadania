@@ -20,17 +20,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return _data
     }
+    exerciseZero()
 
     //Zadanie 1
     function excerciseOne(){
-        const imgChrome = document.querySelector('.ex1 .chrome')
-        console.log(imgChrome)
-        imgChrome.innerHTML = 'chrome'
-        console.log(imgChrome)
+        let edge = document.querySelector('.edge')
+        edge.style.backgroundImage = "url('assets/img/edge.png')"
+
+        let firefox = document.querySelector('.firefox')
+        firefox.style.backgroundImage = "url('assets/img/firefox.png')"
+
+        let chrome = document.querySelector('.chrome')
+        chrome.style.width = "100px"
+
+        chrome.parentElement.querySelector('a').innerHTML = "Chrome"
+        edge.parentElement.querySelector('a').innerHTML = "Microsoft Edge"
+        firefox.parentElement.querySelector('a').innerHTML = "Firefox"
     }
     excerciseOne()
-
-    exerciseZero()
 
     //Zadanie 2
     function excerciseTwo(){
@@ -45,6 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
         return _spanName, _spanColor, _spanX
     }
     excerciseTwo()
+
+    //Zadanie 3
+    function excerciseThree(){
+        const menu = document.querySelector('.ex3 ul')
+        menu.classList.add('menu')
+
+        const menuElement = document.querySelector('.ex3 ul li')
+        Array.prototype.forEach.call(menuElement, element => {
+            element.classList.add('menuElement')
+        });
+
+        const errorClass = document.querySelector('.error')
+        Array.prototype.forEach.call(errorClass, element => {
+            element.classList.remove('error')
+        });
+    }
+    excerciseThree();
 
     //Zadanie 4
     function exerciseFour(){
