@@ -55,18 +55,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     console.log(getId(footer))
 
+    //Zadanie 4
+    function getTags(elements) {
+        var tab = []
+        Array.prototype.forEach.call(elements, element => {
+          tab.push(element.tagName)
+        });
+        return tab
+      }
+    console.log(getTags(childElements))
+
     //Zadanie 5
     function getClassInfo(elements){
-        console.log(elements)
+        /*console.log(elements)
         //elements = Array.prototype.slice(elements, 0)
         let classes = []
         for(let i = 0; i < elements.length; i++){
             classes.push(elements[i].classList)
         }
 
-        return classes
+        return classes*/
+        return Array.from(elements.classList)
     }
-    console.log(getClassInfo(banner.classList))//TODO
+    console.log(getClassInfo(banner))
 
     //Zadanie 6
     function setDataDirection(_elements){
