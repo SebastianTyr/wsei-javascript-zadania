@@ -57,7 +57,7 @@ function printTask2Array(task2Array){
 }
 printTask2Array(task2Array)
 
-//Tablice wielowymiarowe - Zadanie 2
+//Tablice wielowymiarowe - Zadanie 3
 function print2DArray(array)
 {
     array = []
