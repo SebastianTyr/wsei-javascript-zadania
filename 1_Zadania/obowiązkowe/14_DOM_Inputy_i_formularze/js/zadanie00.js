@@ -1,32 +1,40 @@
-var email = document.getElementById('email')
-var name = document.getElementById('name')
-var surname = document.getElementById('surname')
-var pass1 = document.getElementById('pass1')
-var pass2 = document.getElementById('pass2')
+const form = document.querySelector('form')
+const name = document.querySelector('#name')
+const surname = document.querySelector('#surname')
+const pass1 = document.querySelector('#pass1')
+const pass2 = document.querySelector('pass2')
+const chceckbox = document.querySelector('#agree')
+const email = document.querySelector('#email')
+const error = document.querySelector('.error-message')
 
-var a = document.querySelectorAll('.info-container .success-message')
-console.log(a)
+form.addEventListener('submit', function(){
+    if(!email.value.includes('@')){
+        error.innerHTML = "Email musi posiadać znak @"
 
-if(email.includes("@")){
-    document.querySelectorAll('.info-container .success-message').innerHTML = "Hurra"
-} else{
-    document.querySelectorAll('.info-container .success-message').innerHTML = "Email musi posiadać znak @"
-}
+        event.preventDefault()
+    }
 
-if(name.length < 6){
-    document.querySelectorAll('.info-container .success-message').innerHTML = "Hurra"
-} else{
-    document.querySelectorAll('.info-container .success-message').innerHTML =  "Twoje imię jest za krótkie"
-}
-
-if(surname.length < 6){
-    document.querySelectorAll('.info-container .success-message').innerHTML = "Hurra"
-} else{
-    document.querySelectorAll('.info-container .success-message').innerHTML =  "Twoje nazwisko jest za krótkie"
-}
-
-if(pass1 === pass2 && (pass1 == "" || pass2 == "")){
-    document.querySelectorAll('.info-container .success-message').innerHTML = "Hurra"
-} else{
-    document.querySelectorAll('.info-container .success-message').innerHTML =  "Hasła nie są takie same lub puste"
-}
+    if(name.value.length < 6){
+        error.innerHTML = "Twoje imię jest za krótkie"
+    
+        event.preventDefault()
+    }
+    
+    if(surname.value.length < 6){
+        error.innerHTML = "Twoje nazwisko jest za krótkie"
+    
+        event.preventDefault()
+    }
+    
+    if(!(pass1.value && pass2.value === pass2.value)){
+        error.innerHTML = "Hasła nie są takie same lub puste"
+    
+        event.preventDefault()
+    }
+    
+    if(!chceckbox.checked){
+        error.innerHTML = "Musisz zaakceptować warunki"
+    
+        event.preventDefault()
+    }
+})
