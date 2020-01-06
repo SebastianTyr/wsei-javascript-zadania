@@ -24,7 +24,7 @@ cardNo.addEventListener("input", function () {
       if (this.value.length === 15) {
          this.style.border = "2px solid green"
       } else {
-         this.style.border = "none"
+         this.style.border = ""
       }
    } else {
       type.innerHTML = ""
