@@ -10,8 +10,7 @@ button.addEventListener("click", function (){
 
     orders.appendChild(navtr)
 
-    orders.children[0].innerHTML = id.nodeValue
-    orders.children[1].innerHTML = item.nodeValue
-    orders.children[2].innerHTML = quantity.nodeValue
+    orders.children[0].innerHTML = id.value
+    orders.children[1].innerHTML = item.value
+    orders.children[2].innerHTML = quantity.value
 })
-//------------TODO------------//
