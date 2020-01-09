@@ -63,10 +63,27 @@ function print2DArray(array)
     array = []
     for(var i = 0; i < array.length; i++){
         array.push(i)
-        for(var j = 0; j < i; j++){
+        for(var j = 0; j < i.length; j++){
             array.push(j)
+            return array[i][j]
         }
     }
-    console.log(array[i][j])
 }
-print2DArray([[1,2], [3,4]]) // TODO
+console.log(print2DArray([[1,2], [3,4]]))
+
+//Tablice wielowymiarowe - Zadanie 5
+function create2DArray(rows, columns){
+    let array = []
+
+    for(let i = 0; i < rows; i++){
+        array[i] = []
+    }
+
+    for(let i = 0; i < rows; i++){
+        for(let j = 0; j < columns; j++){
+            array[i][j] = i + ',' + j
+        }
+    }
+    return array
+}
+create2DArray(4,4)
