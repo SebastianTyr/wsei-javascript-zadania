@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Zadanie 1
     function excerciseOne(){
+        const edgeLink = "https://www.microsoft.com/pl-pl/windows/microsoft-edge"
+        const firefoxLink = "https://www.mozilla.org/pl/firefox/new/"
+
         let edge = document.querySelector('.edge')
         edge.style.backgroundImage = "url('assets/img/edge.png')"
 
@@ -36,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
         chrome.parentElement.querySelector('a').innerHTML = "Chrome"
         edge.parentElement.querySelector('a').innerHTML = "Microsoft Edge"
         firefox.parentElement.querySelector('a').innerHTML = "Firefox"
+
+        edge.parentElement.querySelector('a').setAttribute("href", edgeLink)
+        firefox.parentElement.querySelector('a').setAttribute("href", firefoxLink)
     }
     excerciseOne()
 
@@ -79,5 +85,5 @@ document.addEventListener("DOMContentLoaded", function () {
         
         return list
     }
-    exerciseFour()
+    console.log(exerciseFour())
 });
